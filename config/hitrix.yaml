@@ -1,0 +1,4 @@
+slack:
+  token: "xoxb-1416529998484-1767915853972-EBOp6gdW76EhJkjkw1AA3mqs"
+  error_channel: "errors-backend"
+  dev_panel_url: "https://dev-frontend.dev.hymn.tv//errors-log"

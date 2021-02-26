@@ -1,0 +1,39 @@
+cors:
+  - http://localhost:3000
+  - http://localhost:4000
+  - http://localhost:9001
+  - https://play.dev.hymn.tv
+  - https://play.demo.hymn.tv
+  - https://play.hymn.tv
+  - https://dev.hymn.tv
+  - https://demo.hymn.tv
+  - https://hymn.tv
+  - https://gateway.dev.hymn.tv
+  - https://gateway.demo.hymn.tv
+  - https://gateway.hymn.tv
+  - https://dev-frontend.dev.hymn.tv
+  - https://dev-frontend.demo.hymn.tv
+  - https://dev-frontend.hymn.tv
+payment:
+  secret: ENV[STRIPE_SECRET]
+  secret_invoice_paid_webhook: ENV[STRIPE_SECRET_INVOICE_PAID_WEBHOOK]
+  secret_invoice_failed_webhook: ENV[STRIPE_SECRET_INVOICE_FAILED_WEBHOOK]
+  secret_payment_intent_succeeded_webhook: ENV[STRIPE_SECRET_PAYMENT_INTENT_SUCCEEDED_WEBHOOK]
+  secret_checkout_session_completed_webhook: ENV[STRIPE_SECRET_CHECKOUT_SESSION_COMPLETED_WEBHOOK]
+frontend_url: https://play.dev.hymn.tv
+streamer_url: https://origin-1.hymn-streaming.com
+mailchimp:
+  api_key: ENV[MANDRILL_API_KEY]
+  from_email: tickets@hymn.tv
+  from_namme: hymn.tv
+
+orm:
+  log_db_pool:
+    mysql: ENV[LOG_DB_POOL_MYSQL]
+  default:
+    mysql: ENV[DEFAULT_MYSQL]
+    redis: ENV[DEFAULT_REDIS]
+    locker: default
+    local_cache: 1000
+  variables:
+    redis: ENV[REDIS_VARIABLES]

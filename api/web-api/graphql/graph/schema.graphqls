@@ -1,0 +1,15 @@
+type Query {
+  Ping: Ping
+}
+
+type Mutation {
+  Ping: Ping
+}
+
+type Ping {
+  ID: ID!
+}
+
+directive @validate(rules: String!) on INPUT_FIELD_DEFINITION
+
+scalar Map

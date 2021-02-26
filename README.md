@@ -1,0 +1,1 @@
+# Skeleton that demonstrate how Hitrix can be used together with ORM and all other tools

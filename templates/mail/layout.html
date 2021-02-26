@@ -1,0 +1,142 @@
+{{ define "layout" }}
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+            "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+    xmlns:o="urn:schemas-microsoft-com:office:office">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="x-apple-disable-message-reformatting"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+        <meta name="format-detection" content="telephone=no"/>
+        <title></title>
+
+
+        <style type="text/css">
+            body {
+                -webkit-text-size-adjust: none;
+                -ms-text-size-adjust: none;
+                margin: 0;
+                padding: 0
+            }
+            .templateContainer {
+                max-width: 590px !important;
+            }
+            .rnb-force-col p, ul, ol {
+                margin: 0px !important;
+            }
+            .rnb-del-min-width p, ul, ol {
+                margin: 0px !important;
+            }
+            li {
+                mso-margin-top-alt: 0;
+                mso-margin-bottom-alt: 0;
+            }
+            /* Outlook fix */
+            table {
+                mso-table-lspace: 0pt;
+                mso-table-rspace: 0pt;
+            }
+
+            /* Outlook fix */
+            table, tr, td {
+                border-collapse: collapse;
+            }
+
+            /* Outlook fix */
+            p, a, li, blockquote {
+                mso-line-height-rule: exactly;
+            }
+            .content-spacing div {
+                display: list-item;
+                list-style-type: none;
+            }
+            #content-header a {
+                color:rgb(26, 26, 26) !important;
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 14px;
+                font-weight: bold;
+                line-height: 21px;
+                text-decoration: none !important;
+            }
+            @media only screen and (min-width: 590px) {
+                .templateContainer {
+                    width: 590px !important;
+                }
+            }
+            @media screen and (max-width: 480px) {
+                .templateContainer {
+                    width: 320px !important;
+                    max-width: 320px !important;
+                }
+            }
+            @media only screen and (max-width: 600px) {
+                ul {
+                    mso-special-format: bullet;
+                }
+            }
+
+        </style>
+
+        <!--[if gte mso 11]>
+        <style type="text/css">
+            table {
+                border-spacing: 0;
+            }
+
+            table td {
+                border-collapse: separate;
+            }
+        </style>
+        <![endif]-->
+
+        <!--[if gte mso 15]>
+        <xml>
+            <o:OfficeDocumentSettings>
+                <o:AllowPNG/>
+                <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml>
+        <![endif]-->
+        <!--[if gte mso 9]>
+        <xml>
+            <o:OfficeDocumentSettings>
+                <o:AllowPNG/>
+                <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml>
+        <![endif]-->
+    </head>
+        <table border="0" align="center" width="100%" cellpadding="0" cellspacing="0" class="main-template" bgcolor="#FAFAFA" style="background-color: rgb(250, 250, 250);width: 100%;">
+            <tbody>
+                <tr style="display:none !important; font-size:1px; mso-hide: all;">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+                <tr id="bl-space-top">
+                    <td style="min-width: 10px;">&nbsp;</td>
+                    <td height="28" style="font-size:1px; line-height:0px; mso-hide: all;">
+                        &nbsp;
+                    </td>
+                    <td style="min-width: 10px;">&nbsp;</td>
+                </tr>
+                {{ template "header" . }}
+                {{ template "content" . }}
+                {{ template "footer" . }}
+                <tr id="bl-space-bottom">
+                    <td style="min-width: 10px;">&nbsp;</td>
+                    <td height="60" style="font-size:1px; line-height:0px; mso-hide: all;">
+                        &nbsp;
+                    </td>
+                    <td style="min-width: 10px;">&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+
+    <body>
+    </body>
+    </html>
+{{ end }}

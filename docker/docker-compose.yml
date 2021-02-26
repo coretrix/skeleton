@@ -1,0 +1,38 @@
+version: '3'
+services:
+  mysql:
+    image: percona
+    volumes:
+      - orm_data_mysql:/var/lib/mysql
+      - orm_logs_mysql:/var/log/mysql
+    ports:
+      - ${LOCAL_IP}:${MYSQL_PORT}:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+  redis:
+    image: redis
+    volumes:
+      - orm_data_redis:/data
+    ports:
+      - ${LOCAL_IP}:${REDIS_PORT}:6379
+  mailcatcher:
+    image: dockage/mailcatcher:0.6.5
+    ports:
+      - ${LOCAL_IP}:${MAILCATCHER_PORT}:1025
+      - ${LOCAL_IP}:${MAILCATCHER_WEB_PORT}:1080
+  services:
+    build:
+      context: .
+      dockerfile: services/Dockerfile
+    depends_on:
+      - mysql
+      - redis
+      - mailcatcher
+    ports:
+      - 4002:4002
+    volumes:
+      - ..:/go/src/github.com/coretrix/skeleton
+volumes:
+  orm_data_mysql: {}
+  orm_logs_mysql: {}
+  orm_data_redis: {}

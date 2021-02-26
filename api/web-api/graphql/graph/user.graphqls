@@ -1,0 +1,14 @@
+extend type Query {
+  Me: User
+}
+
+type User {
+  ID: ID!
+  Username: String!
+  Age: Int!
+  Pet: Animal
+}
+
+type Animal {
+  nickname: String!
+}
